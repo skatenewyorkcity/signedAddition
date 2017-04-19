@@ -147,8 +147,8 @@ int main(){
 
 			}
 
-			cout << num1Counter << endl;
-			cout << num2Counter << endl;
+			//cout << num1Counter << endl;
+			//cout << num2Counter << endl;
 
 			//+++
 
@@ -232,8 +232,8 @@ int main(){
 
 			}
 
-			cout << num1Counter; cout << endl;
-			cout << num2Counter; cout << endl;
+			//cout << num1Counter; cout << endl;
+			//cout << num2Counter; cout << endl;
 
 			//input(num3); cout << endl;
 

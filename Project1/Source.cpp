@@ -34,7 +34,8 @@ int main(){
 
 	do{
 
-		cout << "===============================\n"
+		cout <<
+			"===============================\n"
 			"===~ DECI 2 BINA CONVERTER ~===\n"
 			"===============================\n"
 			"1) Input '1' to compute. \n"
@@ -44,7 +45,8 @@ int main(){
 
 		if (select == "0"){
 
-			cout << "...............................\n"
+			cout <<
+				"...............................\n"
 				"EXITING PROGRAM\n"
 				"-------------------------------\n";
 
@@ -53,7 +55,8 @@ int main(){
 		}
 		else{
 
-			cout << "...............................\n"
+			cout <<
+				"...............................\n"
 				"DEC DIGIT(1): ";	cin >> num1;
 			input1(num1); //cout << endl;
 
@@ -63,10 +66,11 @@ int main(){
 
 
 			//++
-			
+
 			if (num1 >= 0){
 
-				cout << "...............................\n"
+				cout <<
+					"...............................\n"
 					"BIN 1'S COMP(1): ";	//cin >> num1;
 				binary1(num1); //cout << endl;
 
@@ -81,7 +85,8 @@ int main(){
 			}
 			else if (num1 < 0){
 
-				cout << "...............................\n"
+				cout <<
+					"...............................\n"
 					"BIN 1'S COMP(1): ";	//cin >> num1;
 				binary1(num1); //cout << endl;
 
@@ -103,10 +108,10 @@ int main(){
 			}
 
 			//
-			
+
 			if (num2 >= 0){
 
-				cout << 
+				cout <<
 					"BIN 1'S COMP(2): ";	//cin >> num1;
 				binary2(num2); //cout << endl;
 
@@ -121,7 +126,7 @@ int main(){
 			}
 			else if (num2 < 0){
 
-				cout << 
+				cout <<
 					"BIN 1'S COMP(2): ";	//cin >> num1;
 				binary2(num2); //cout << endl;
 
@@ -142,11 +147,15 @@ int main(){
 
 			}
 
+			cout << num1Counter << endl;
+			cout << num2Counter << endl;
+
 			//+++
 
 			if (num1 >= 0){
 
-				cout << "...............................\n"
+				cout <<
+					"...............................\n"
 					"BIN 2'S COMP(1): ";	//cin >> num1;
 				twos1(num1); //cout << endl;
 
@@ -161,7 +170,8 @@ int main(){
 			}
 			else if (num1 < 0){
 
-				cout << "...............................\n"
+				cout <<
+					"...............................\n"
 					"BIN 2'S COMP(1): ";	//cin >> num1;
 				twos1(num1); //cout << endl;
 
@@ -222,24 +232,23 @@ int main(){
 
 			}
 
-			//cout << num1Counter; cout << endl;
-			//cout << num2Counter; cout << endl;
+			cout << num1Counter; cout << endl;
+			cout << num2Counter; cout << endl;
 
 			//input(num3); cout << endl;
 
 			addDigits();
 
 			if (carryArr[1] && (doh1[0] + doh2[0] == 0)){
-				
-				cout << "...............................\n"
+
+				cout <<
+					"...............................\n"
 					"OVERFLOW DETECTED";	//cin >> num1;
 				//addDigits(); //cout << endl;
-				
+
 				/*
 				for (int i = 0; i <= 7; i++){
-
-					cout << doh3[i];
-
+				cout << doh3[i];
 				}
 				*/
 
@@ -248,10 +257,11 @@ int main(){
 			}
 			else{
 
-				cout << "...............................\n"
+				cout <<
+					"...............................\n"
 					"ADD (1) AND (2): ";	//cin >> num1;
 				//addDigits(); 
-				
+
 				//cout << endl;
 
 				for (int i = 0; i <= 7; i++){
@@ -276,11 +286,17 @@ int main(){
 
 			//for (int i = 0; i <= 7; i++){
 
-				//cout << carryArr[i];
+			//cout << carryArr[i];
 
 			//}
 
 			//cout << endl;
+
+			num1Counter = 0;
+			num2Counter = 0;
+
+			carry = 0;
+
 
 		}
 
@@ -443,7 +459,7 @@ int binary2(int n){
 	}
 	else if (n < 0){
 
-		n = n*-1; 
+		n = n*-1;
 
 		int result;
 		int i = 7;
@@ -527,7 +543,7 @@ int twos1(int n){
 	}
 	else if (n < 0){
 
-		n = (n+1)*-1;
+		n = (n + 1)*-1;
 
 		int result;
 		int i = 7;
@@ -569,7 +585,7 @@ int twos2(int n){
 	}
 	else if (n < 0){
 
-		n = (n+1)*-1;
+		n = (n + 1)*-1;
 
 		int result;
 		int i = 7;
@@ -598,7 +614,7 @@ void addDigits(){
 			doh3[i] = 0;
 			carry = 0;
 			carryArr[i] = carry;
-		}	
+		}
 		else if (carry == 0 && (doh1[i] + doh2[i] == 1)){
 			doh3[i] = 1;
 			carry = 0;
